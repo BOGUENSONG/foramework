@@ -1,5 +1,6 @@
 var http = require("http"); //http request
 var fs = require('fs'); //파일 입출력 시스템
+var mongoose = require('mongoose'); //mongoDB연결
 
 http.createServer(function(request, response){
 
@@ -22,5 +23,6 @@ http.createServer(function(request, response){
   */
  response.end(fs.readFileSync(__dirname + url));
 }).listen(8081);
+
 
 console.log("server running at http://localhost:8081");
